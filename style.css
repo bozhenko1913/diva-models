@@ -797,4 +797,21 @@ section { padding: 120px 0; text-align: center; border-bottom: 1px solid rgba(25
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}/* --- МОБИЛЬНЫЙ ФОН ДЛЯ ПЕРВОЙ СЕКЦИИ --- */
+@media (max-width: 768px) {
+    .hero {
+        /* 1. Ссылка на картинку (замените hero-mobile.jpg на ваше название) */
+        /* Мы добавили затемнение (rgba), чтобы белый текст читался поверх фото */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-mobile.jpg');
+        
+        /* 2. Настройки отображения */
+        background-size: cover;    /* Растянуть картинку на весь экран */
+        background-position: center; /* Центрировать картинку */
+        background-repeat: no-repeat;
+    }
+
+    /* 3. Скрываем старый красный эффект, чтобы он не перекрывал фото (опционально) */
+    .hero .red-glow-bg {
+        display: none;
+    }
 }
