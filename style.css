@@ -815,9 +815,10 @@ section { padding: 120px 0; text-align: center; border-bottom: 1px solid rgba(25
         background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('mob-6.jpg');
     }
 
-    /* 7. ФУТЕР (Подвал сайта) */
-    footer.footer {
+    /* 7. БЛОГ (#blog) */
+    #blog {
         background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('mob-7.jpg');
         background-size: cover;
     }
 }
+
