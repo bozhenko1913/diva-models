@@ -817,8 +817,9 @@ section { padding: 120px 0; text-align: center; border-bottom: 1px solid rgba(25
 
     /* 7. БЛОГ (#blog) */
     #blog {
-        background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('mob-7.jpg');
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('mob-7.jpg');
         background-size: cover;
     }
 }
+
 
