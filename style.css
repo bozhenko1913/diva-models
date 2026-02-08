@@ -773,45 +773,51 @@ section { padding: 120px 0; text-align: center; border-bottom: 1px solid rgba(25
 }
 /* ДОБАВИТЬ В САМЫЙ КОНЕЦ style.css */
 
+/* --- УНИКАЛЬНЫЕ ФОНЫ ДЛЯ СЕКЦИЙ (ТОЛЬКО МОБИЛЬНЫЕ) --- */
 @media (max-width: 768px) {
-    /* Поскольку меню на телефоне стало высоким (в столбик),
-       делаем большой отступ сверху для главного экрана */
-    .hero {
-        padding-top: 220px !important; /* Увеличили отступ, чтобы текст было видно */
-    }
-    
-    /* Можно немного уменьшить шрифт заголовка, чтобы он лучше влезал */
-    .hero h1 {
-        font-size: 2rem;
-        margin-top: 20px;
-    }
-}
-/* Стили для анимации появления */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
-}
 
-/* Класс, который будет добавляться скриптом при докрутке */
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}/* --- МОБИЛЬНЫЙ ФОН ДЛЯ ПЕРВОЙ СЕКЦИИ --- */
-@media (max-width: 768px) {
-    .hero {
-        /* 1. Ссылка на картинку (замените hero-mobile.jpg на ваше название) */
-        /* Мы добавили затемнение (rgba), чтобы белый текст читался поверх фото */
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-mobile.jpg');
-        
-        /* 2. Настройки отображения */
-        background-size: cover;    /* Растянуть картинку на весь экран */
-        background-position: center; /* Центрировать картинку */
-        background-repeat: no-repeat;
+    /* Общие настройки для всех секций на телефоне */
+    section {
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: scroll; /* На телефонах лучше scroll, чтобы не глючило */
     }
 
-    /* 3. Скрываем старый красный эффект, чтобы он не перекрывал фото (опционально) */
-    .hero .red-glow-bg {
-        display: none;
+    /* 1. ГЛАВНЫЙ ЭКРАН (Hero) */
+    #hero {
+        /* Замените mob-1.jpg на вашу картинку */
+        background-image: linear-gradient(rgba(0,0,0,0.5), #000), url('mob-1.jpg') !important;
+    }
+
+    /* 2. О НАС (#about) */
+    #about {
+        background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('mob-2.jpg');
+    }
+
+    /* 3. ПРЕИМУЩЕСТВА (#features) */
+    #features {
+        background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('mob-3.jpg');
+    }
+
+    /* 4. ПРОЦЕСС/ШАГИ (#steps) */
+    #steps {
+        background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('mob-4.jpg');
+    }
+
+    /* 5. УСЛУГИ (#services) */
+    #services {
+        background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('mob-5.jpg');
+    }
+
+    /* 6. ВЫГОДЫ ДЛЯ МОДЕЛЕЙ (#benefits) */
+    #benefits {
+        background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('mob-6.jpg');
+    }
+
+    /* 7. ФУТЕР (Подвал сайта) */
+    footer.footer {
+        background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('mob-7.jpg');
+        background-size: cover;
     }
 }
