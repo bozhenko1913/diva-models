@@ -790,120 +790,74 @@ section { padding: 120px 0; text-align: center; border-bottom: 1px solid rgba(25
         background-image: linear-gradient(rgba(0,0,0,0.5), #000), url('mob-1.jpg') !important;
     }
  }
-<!DOCTYPE html>
-<html lang=\"ru\">
-<head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    <title>Оставить заявку | DIVA MODELS</title>
-    
-    <link rel=\"icon\" href=\"logo.png?v=2\" type=\"image/png\">
-    
-    <link rel=\"stylesheet\" href=\"style.css\">
-    <link href=\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Syncopate:wght@400;700&family=Inter:wght@300;400;600;800&display=swap\" rel=\"stylesheet\">
-</head>
-<body class=\"page-apply\">
+/* --- СЕКЦИЯ ФОРМЫ НА ГЛАВНОЙ --- */
+.apply-section {
+    padding: 100px 0;
+    background: radial-gradient(circle at center, rgba(212, 29, 61, 0.05) 0%, transparent 70%);
+}
 
-    <header>
-        <div class=\"container header-content\">
-            <a href=\"index.html\" style=\"text-decoration: none;\" class=\"logo\">DIVA <span>MODELS</span></a>
-            
-            <nav class=\"main-nav\" id=\"mainNav\">
-                <a href=\"index.html#about\" class=\"lang\" data-ru=\"О нас\" data-ua=\"Про нас\" onclick=\"closeMenu()\">О нас</a>
-                <a href=\"index.html#features\" class=\"lang\" data-ru=\"Преимущества\" data-ua=\"Переваги\" onclick=\"closeMenu()\">Преимущества</a>
-                <a href=\"index.html#services\" class=\"lang\" data-ru=\"Услуги\" data-ua=\"Послуги\" onclick=\"closeMenu()\">Услуги</a>
-            </nav>
+.apply-box {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
 
-            <div class=\"nav-controls\">
-                <div class=\"lang-switcher\">
-                    <span class=\"lang-btn active\" id=\"btn-ru\" onclick=\"setLanguage('ru')\">RU</span>
-                    <span class=\"lang-divider\">|</span>
-                    <span class=\"lang-btn\" id=\"btn-ua\" onclick=\"setLanguage('ua')\">UA</span>
-                </div>
-                <div class=\"burger-menu\" onclick=\"toggleMenu()\">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </div>
-    </header>
+.apply-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
-    <main>
-        <section class=\"apply-section\">
-            <div class=\"container\">
-                <div class=\"apply-box\">
-                    <h1 class=\"lang\" data-ru=\"СТАТЬ МОДЕЛЬЮ\" data-ua=\"СТАТИ МОДЕЛЛЮ\">СТАТЬ МОДЕЛЬЮ</h1>
-                    <p class=\"lang\" 
-                       data-ru=\"Оставьте свои данные, и наш менеджер свяжется с вами в Telegram для обсуждения условий.\" 
-                       data-ua=\"Залиште свої дані, і наш менеджер зв'яжеться з вами в Telegram для обговорення умов.\">
-                       Оставьте свои данные, и наш менеджер свяжется с вами в Telegram для обсуждения условий.
-                    </p>
+.input-group {
+    position: relative;
+}
 
-                    <form action=\"#\" method=\"POST\" class=\"apply-form\">
-                        
-                        <div class=\"input-group\">
-                            <input type=\"text\" id=\"model_name\" required placeholder=\" \">
-                            <label for=\"model_name\" class=\"lang\" data-ru=\"Ваше имя\" data-ua=\"Ваше ім'я\">Ваше имя</label>
-                        </div>
+.input-group input {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    transition: 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
 
-                        <div class=\"input-group\">
-                            <input type=\"tel\" id=\"model_phone\" required placeholder=\" \">
-                            <label for=\"model_phone\" class=\"lang\" data-ru=\"Номер телефона\" data-ua=\"Номер телефону\">Номер телефона</label>
-                        </div>
+.input-group label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    transition: 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
 
-                        <div class=\"input-group\">
-                            <input type=\"text\" id=\"model_tg\" required placeholder=\" \">
-                            <label for=\"model_tg\" class=\"lang\" data-ru=\"Ваш Telegram (@username)\" data-ua=\"Ваш Telegram (@username)\">Ваш Telegram (@username)</label>
-                        </div>
+/* Красивая анимация текста вверх */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: -12px;
+    font-size: 12px;
+    color: #d41d3d;
+}
 
-                        <button type=\"submit\" class=\"btn-primary lang\" data-ru=\"Отправить заявку\" data-ua=\"Відправити заявку\">Отправить заявку</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+.input-group input:focus {
+    border-bottom-color: #d41d3d;
+}
 
-    <footer class=\"footer\">
-        <div class=\"container\">
-            <div class=\"footer-bottom\" style=\"text-align: center; border-top: none; padding-top: 0;\">
-                <p class=\"lang\" data-ru=\"&copy; 2026 DIVA MODELS. Все права защищены.\" data-ua=\"&copy; 2026 DIVA MODELS. Усі права захищені.\">&copy; 2026 DIVA MODELS. Все права защищены.</p>
-                <p>Confidentiality Guaranteed.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Меню
-        function toggleMenu() {
-            document.getElementById('mainNav').classList.toggle('active');
-            document.querySelector('.burger-menu').classList.toggle('active');
-        }
-        function closeMenu() {
-            document.getElementById('mainNav').classList.remove('active');
-            document.querySelector('.burger-menu').classList.remove('active');
-        }
-
-        // Языки
-        function setLanguage(lang) {
-            localStorage.setItem('diva_lang', lang);
-            document.querySelectorAll('.lang').forEach(el => {
-                const text = el.getAttribute(`data-${lang}`);
-                if (text) el.innerHTML = text;
-            });
-            const btnRu = document.getElementById('btn-ru');
-            const btnUa = document.getElementById('btn-ua');
-            if (lang === 'ru') {
-                btnRu.classList.add('active');
-                btnUa.classList.remove('active');
-            } else {
-                btnUa.classList.add('active');
-                btnRu.classList.remove('active');
-            }
-        }
-
-        window.onload = () => {
-            const savedLang = localStorage.getItem('diva_lang') || 'ru';
-            setLanguage(savedLang);
-        };
-    </script>
-</body>
-</html>
+@media (max-width: 768px) {
+    .apply-box {
+        padding: 40px 25px;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+    }
+}
