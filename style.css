@@ -873,4 +873,33 @@ section { padding: 120px 0; text-align: center; border-bottom: 1px solid rgba(25
     .hero-image {
         max-width: 90%;
     }
+}/* Базовая настройка сетки */
+.hero-wrapper { 
+    display: flex; 
+    align-items: center; 
+    gap: 60px; 
+    padding-top: 50px;
+}
+
+.hero-text-side, .hero-img-side { flex: 1; }
+
+/* Картинка */
+.hero-img { width: 100%; border-radius: 20px; object-fit: cover; }
+
+/* Текстовые элементы */
+.hero-title { font-size: clamp(30px, 4vw, 55px); font-weight: 900; line-height: 1.1; margin-bottom: 20px; color: #fff; }
+.hero-desc { color: #b3b3b3; font-size: 16px; margin-bottom: 30px; line-height: 1.6; }
+
+/* Кнопки и статистика */
+.hero-actions { display: flex; gap: 15px; margin-bottom: 40px; }
+.hero-stats { display: flex; gap: 40px; }
+.stat-val { font-size: 24px; font-weight: 800; color: #fff; }
+.stat-item p { font-size: 11px; color: #888; text-transform: uppercase; margin: 0; }
+
+/* АДАПТИВ (на телефоне) */
+@media (max-width: 992px) {
+    .hero-wrapper { flex-direction: column-reverse; text-align: center; gap: 30px; }
+    .hero-actions { justify-content: center; flex-direction: column; }
+    .hero-stats { justify-content: center; }
+    .hero-title { font-size: 32px; }
 }
