@@ -242,37 +242,32 @@ src="https://www.facebook.com/tr?id=3420745024723839&ev=PageView&noscript=1"
     </header>
 
     <main style="padding-top: 80px;"> 
-  <section class="hero" id="hero">
-    <div class="container hero-wrapper">
-        <!-- Текстовая часть (СЛЕВА на ПК) -->
-        <div class="hero-text-side">
-            <h1 class="hero-title">$5,000+ <br>в месяц из дома</h1>
-            <p class="hero-desc">Присоединяйся к Diva Models и получи приватную команду для чатов, PPV, контента и трафика, чтобы превращать внимание в стабильный доход.</p>
-            
-            <div class="hero-actions">
-                <a href="apply.html" class="btn-primary">Подать заявку →</a>
-                <button class="btn-calc" onclick="openModal()">🧮 Рассчитать доход</button>
-            </div>
-
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-val">50+</div>
-                    <p>моделей доверяют</p>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-val">$3M+</div>
-                    <p>выплат креаторам</p>
-                </div>
-            </div>
+  <section class="hero-overlay-section" id="hero">
+    <!-- Фон (меняется сам в зависимости от устройства) -->
+    <picture class="hero-bg">
+        <source media="(max-width: 992px)" srcset="hero-mobile.jpg">
+        <img src="hero-desktop.jpg" alt="Background" class="hero-bg-img">
+    </picture>
+    
+    <!-- Контент -->
+    <div class="container hero-content-overlay">
+        <h1 class="hero-title">$5,000+ <br>в месяц из дома</h1>
+        <p class="hero-desc">Присоединяйся к Diva Models и получи приватную команду для чатов, PPV, контента и трафика, чтобы превращать внимание в стабильный доход.</p>
+        
+        <div class="hero-actions">
+            <a href="apply.html" class="btn-primary">Подать заявку →</a>
+            <button class="btn-calc" onclick="openModal()">🧮 Рассчитать доход</button>
         </div>
 
-        <!-- Картинка (СПРАВА на ПК, сверху на Мобильных) -->
-        <div class="hero-img-side">
-            <picture>
-                <!-- Браузер сам подставит нужный файл -->
-                <source media="(max-width: 992px)" srcset="hero-mobile.jpg">
-                <img src="hero-desktop.jpg" alt="Diva Models" class="hero-img">
-            </picture>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-val">50+</div>
+                <p>моделей доверяют</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-val">$3M+</div>
+                <p>выплат креаторам</p>
+            </div>
         </div>
     </div>
 </section>
