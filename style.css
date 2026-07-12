@@ -860,4 +860,17 @@ section { padding: 120px 0; text-align: center; border-bottom: 1px solid rgba(25
         background: transparent;
         box-shadow: none;
     }
+}/* Настройка для фото в Hero */
+.hero-image {
+    max-width: 800px; /* Регулируйте размер по желанию */
+    width: 100%;
+    margin-bottom: 30px;
+    display: block;
+}
+
+/* Дополнительно: чтобы фото не вылезало за границы на телефонах */
+@media (max-width: 768px) {
+    .hero-image {
+        max-width: 90%;
+    }
 }
