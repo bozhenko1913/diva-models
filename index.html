@@ -244,7 +244,7 @@ src="https://www.facebook.com/tr?id=3420745024723839&ev=PageView&noscript=1"
     <main style="padding-top: 80px;"> 
   <section class="hero" id="hero">
     <div class="container hero-wrapper">
-        <!-- Текст теперь слева -->
+        <!-- Текстовая часть (СЛЕВА на ПК) -->
         <div class="hero-text-side">
             <h1 class="hero-title">$5,000+ <br>в месяц из дома</h1>
             <p class="hero-desc">Присоединяйся к Diva Models и получи приватную команду для чатов, PPV, контента и трафика, чтобы превращать внимание в стабильный доход.</p>
@@ -266,9 +266,13 @@ src="https://www.facebook.com/tr?id=3420745024723839&ev=PageView&noscript=1"
             </div>
         </div>
 
-        <!-- Картинка теперь справа -->
+        <!-- Картинка (СПРАВА на ПК, сверху на Мобильных) -->
         <div class="hero-img-side">
-            <img src="hero-image.jpg" alt="Diva Models" class="hero-img">
+            <picture>
+                <!-- Браузер сам подставит нужный файл -->
+                <source media="(max-width: 992px)" srcset="hero-mobile.jpg">
+                <img src="hero-desktop.jpg" alt="Diva Models" class="hero-img">
+            </picture>
         </div>
     </div>
 </section>
